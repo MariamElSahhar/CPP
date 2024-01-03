@@ -6,11 +6,11 @@
 #    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2023/12/19 21:58:16 by melsahha         ###   ########.fr        #
+#    Updated: 2024/01/03 21:27:52 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = sed
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra
 
