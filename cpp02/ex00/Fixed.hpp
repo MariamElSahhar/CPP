@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 14:05:30 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/04 14:22:13 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/16 17:57:43 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class Fixed {
     private:
 		int					value;
-		static const int	fract;
+		static const int	fractionalBits = 8;
     public:
 		Fixed();
 		Fixed(Fixed &f);
