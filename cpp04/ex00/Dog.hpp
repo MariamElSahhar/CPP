@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 11:55:06 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/24 12:27:53 by melsahha         ###   ########.fr       */
+/*   Created: 2024/01/24 20:12:43 by melsahha          #+#    #+#             */
+/*   Updated: 2024/01/24 20:13:27 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef DOG_HPP
+#define DOG_HPP
 
-int main () {
-    ClapTrap ct = ClapTrap("bob");
+#include "Animal.hpp"
 
-    ct.takeDamage(10);
-    ct.takeDamage(1);
-    ct.beRepaired(3);
-    ct.takeDamage(1);
-    ct.attack("joe");
-
-
-    return 0;
+class Dog : public Animal {
+    
 }
+
+#endif

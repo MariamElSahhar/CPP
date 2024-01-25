@@ -1,19 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 11:55:17 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/24 12:26:19 by melsahha         ###   ########.fr       */
+/*   Created: 2024/01/24 11:55:06 by melsahha          #+#    #+#             */
+/*   Updated: 2024/01/24 17:47:24 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-#include <iostream>
 
-ClapTrap::ClapTrap(std::string n) : _name(n), _hit(10), _energy(10), _attack(0) {}
+ClapTrap::ClapTrap(std::string n) : _name(n), _hit(10), _energy(10), _attack(0) {
+    std::cout << "ClapTrap called " << _name << " created." << std::endl;
+}
+
+ClapTrap::~ClapTrap() {
+    std::cout << "ClapTrap " << _name << " destroyed." << std::endl;
+}
 
 void ClapTrap::takeDamage(unsigned int amount) {
     if (_hit == 0)
