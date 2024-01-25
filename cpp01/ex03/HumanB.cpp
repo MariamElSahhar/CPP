@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 20:59:44 by melsahha          #+#    #+#             */
-/*   Updated: 2023/12/19 21:56:54 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:50:54 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 HumanB::HumanB(std::string name) : name(name), weapon(nullptr) {}
 
 void HumanB::attack() {
-    std::cout << name << " attacks with their " << weapon->getType() << std::endl;
+	if (!weapon)
+		std::cout << name << " is unarmed" << std::endl;
+	else
+	    std::cout << name << " attacks with their " << weapon->getType() << std::endl;
 }
 
 void HumanB::setWeapon(Weapon& w) {
