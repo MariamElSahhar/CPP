@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:55:22 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:07:28 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:14:10 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class ClapTrap {
     public:
         ClapTrap (std::string n);
         ~ClapTrap ();
+		ClapTrap (ClapTrap const &ct);
+		ClapTrap& operator=(ClapTrap const &ct);
 
         void attack(const std::string& target);
         void takeDamage(unsigned int amount);

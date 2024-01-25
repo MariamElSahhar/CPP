@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:09:24 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/24 18:10:29 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:21:52 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ class FragTrap : public ClapTrap {
     public:
         FragTrap (std::string n);
         ~FragTrap();
-        
+		FragTrap (FragTrap const &ct);
+		FragTrap& operator=(FragTrap const &ct);
+
         void highFiveGuys();
 };
 

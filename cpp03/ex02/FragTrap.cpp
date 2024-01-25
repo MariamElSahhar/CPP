@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:09:45 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/24 18:12:39 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:22:25 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,26 @@ FragTrap::FragTrap (std::string n) : ClapTrap(n) {
 
 FragTrap::~FragTrap () {
     std::cout << "FragTrap " << _name << " destroyed" << std::endl;
+}
+
+FragTrap &FragTrap::operator=(FragTrap const &ct) {
+	std::cout << "FragTrap copy assinment operator called." << std::endl;
+	if (this != &ct) {
+		_name = ct._name;
+		_attack = ct._attack;
+		_energy = ct._energy;
+		_hit = ct._hit;
+	}
+	else
+		return (*this);
+}
+
+FragTrap::FragTrap(FragTrap const &ct) {
+	std::cout << "FragTrap copy constructor called." << std::endl;
+	_name = ct._name;
+	_attack = ct._attack;
+	_hit = ct._hit;
+	_energy = ct._energy;
 }
 
 void FragTrap::highFiveGuys() {

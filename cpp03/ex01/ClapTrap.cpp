@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:55:06 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/24 18:01:14 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:21:19 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,26 @@ ClapTrap::ClapTrap(std::string n) : _name(n), _hit(10), _energy(10), _attack(0) 
 
 ClapTrap::~ClapTrap() {
     std::cout << "ClapTrap " << _name << " destroyed." << std::endl;
+}
+
+ClapTrap &ClapTrap::operator=(ClapTrap const &ct) {
+	std::cout << "ClapTrap copy assinment operator called." << std::endl;
+	if (this != &ct) {
+		_name = ct._name;
+		_attack = ct._attack;
+		_energy = ct._energy;
+		_hit = ct._hit;
+	}
+	else
+		return (*this);
+}
+
+ClapTrap::ClapTrap(ClapTrap const &ct) {
+	std::cout << "ClapTrap copy constructor called." << std::endl;
+	_name = ct._name;
+	_attack = ct._attack;
+	_hit = ct._hit;
+	_energy = ct._energy;
 }
 
 void ClapTrap::takeDamage(unsigned int amount) {
