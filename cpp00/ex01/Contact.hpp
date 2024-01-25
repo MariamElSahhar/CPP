@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:25:02 by melsahha          #+#    #+#             */
-/*   Updated: 2023/09/10 21:21:30 by melsahha         ###   ########.fr       */
+/*   Updated: 2023/10/22 17:34:54 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #define CONTACT_HPP
 
 #include <string>
+#include <iostream>
+#include <cctype>
 
 class Contact {
 	private:
@@ -23,6 +25,7 @@ class Contact {
 		std::string darkestSecret;
 		std::string phoneNum;
 	public:
+		Contact();
 		Contact(const std::string& fn, const std::string& ln, const std::string& nn, const std::string& secret, const std::string& num);
 		std::string getFirstName() const;
 		std::string getLastName() const;
