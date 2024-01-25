@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:13:31 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/24 20:18:38 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:40:48 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,15 @@
 
 class Animal {
     protected:
-        std::string type;
+        std::string _type;
+
     public:
         Animal ();
+		~Animal ();
+		Animal (Animal const &a);
+		Animal operator=(Animal const &a);
+
+		std::string getType ();
         virtual void makeSound();
 };
 
