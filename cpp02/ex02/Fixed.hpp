@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 14:05:30 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/23 22:20:51 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:05:24 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <string>
+#include <math.h>
 
 class Fixed {
     private:
@@ -26,7 +27,7 @@ class Fixed {
 		Fixed(const float f);
 		Fixed(const Fixed &f);
 		~Fixed();
-		
+
 		Fixed	operator=(Fixed const& f);
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
