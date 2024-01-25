@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 11:55:06 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:21:28 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:30:43 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ ClapTrap &ClapTrap::operator=(ClapTrap const &ct) {
 		_energy = ct._energy;
 		_hit = ct._hit;
 	}
-	else
-		return (*this);
+	return (*this);
 }
 
 ClapTrap::ClapTrap(ClapTrap const &ct) {

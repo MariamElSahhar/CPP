@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:09:45 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:22:25 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/25 21:30:33 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,7 @@ FragTrap &FragTrap::operator=(FragTrap const &ct) {
 		_energy = ct._energy;
 		_hit = ct._hit;
 	}
-	else
-		return (*this);
+	return (*this);
 }
 
 FragTrap::FragTrap(FragTrap const &ct) {
