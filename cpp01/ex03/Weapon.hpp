@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 21:55:13 by melsahha          #+#    #+#             */
-/*   Updated: 2023/12/12 21:58:53 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 19:10:50 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@
 
 class Weapon
 {
-    private:
-        std::string type;
-    public:
-        Weapon(std::string type);
+	private:
+		std::string type;
+	public:
+		Weapon(std::string type);
 
-        std::string getType();
-        void        setType(std::string type);
+		const std::string&	getType ();
+		void				setType (std::string type);
 };
 
 
