@@ -23,10 +23,9 @@ Cat::~Cat () {
 	delete _brain;
 }
 
-Cat::Cat (Cat const &a) {
+Cat::Cat (Cat const &a) : Animal(a){
 	if (&a != this) {
 		*this = a;
-		_brain = a._brain;
 	}
 }
 

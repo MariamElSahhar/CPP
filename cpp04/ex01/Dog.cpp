@@ -23,7 +23,7 @@ Dog::~Dog () {
 	delete _brain;
 }
 
-Dog::Dog (Dog const &a) {
+Dog::Dog (Dog const &a) : Animal(a) {
 	if (&a != this) {
 		*this = a;
 		_brain = a._brain;

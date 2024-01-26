@@ -21,7 +21,7 @@ WrongCat::~WrongCat () {
 	std::cout << "WrongCat desctructor called." << std::endl;
 }
 
-WrongCat::WrongCat (WrongCat const &a) {
+WrongCat::WrongCat (WrongCat const &a) : WrongAnimal(a) {
 	if (&a != this) {
 		*this = a;
 	}
