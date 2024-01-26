@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 14:04:09 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:30:55 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 19:44:30 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,8 @@ ScavTrap &ScavTrap::operator=(ScavTrap const &ct) {
 	return (*this);
 }
 
-ScavTrap::ScavTrap(ScavTrap const &ct) {
+ScavTrap::ScavTrap(ScavTrap const &ct) : ClapTrap(ct._name) {
 	std::cout << "ScavTrap copy constructor called." << std::endl;
-	_name = ct._name;
 	_attack = ct._attack;
 	_hit = ct._hit;
 	_energy = ct._energy;
