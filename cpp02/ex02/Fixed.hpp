@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 14:05:30 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:05:24 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 19:30:03 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ class Fixed {
 		Fixed(const float f);
 		Fixed(const Fixed &f);
 		~Fixed();
-
 		Fixed	operator=(Fixed const& f);
+
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 		float	toFloat( void ) const;
