@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:30:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 17:14:22 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:17:51 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ bool PhoneBook::allDigits(std::string index) const {
 	return true;
 }
 
-void PhoneBook::searchContact() const {
+bool PhoneBook::searchContact() const {
 	std::string index;
 	displayContacts();
 	std::cout << "Please enter the index of the contact" << std::endl;
@@ -102,10 +102,16 @@ void PhoneBook::searchContact() const {
 			std::cout << std::endl;
 			displayContact(std::stoi(index));
 		}
+
 		else
 			std::cout << "Sorry, index out of range" << std::endl << std::endl;
-	} else {
+	}
+	else if (index == "EXIT") {
+			return (0);
+	}
+	else {
 		std::cout << "Sorry, invalid input" << std::endl << std::endl;
 	}
+	return (1);
 }
 

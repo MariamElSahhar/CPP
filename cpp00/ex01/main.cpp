@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:12:05 by melsahha          #+#    #+#             */
-/*   Updated: 2023/10/22 17:42:31 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:16:54 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ int	main()
 				return (0);
 			if (input == "ADD")
 				phonebook.requestContact();
-			else if (input == "SEARCH")
-				phonebook.searchContact();
+			else if (input == "SEARCH") {
+				if (!phonebook.searchContact())
+					return (0);
+			}
 			else {
 				std::cout << "Sorry, please try again" << std::endl;
 			}
