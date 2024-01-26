@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:30:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 17:17:51 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:29:48 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,10 @@ bool PhoneBook::allDigits(std::string index) const {
 bool PhoneBook::searchContact() const {
 	std::string index;
 	displayContacts();
+	if (numContacts == 0) {
+		std::cout << "No contacts yet.." << std::endl;
+		return (1);
+	}
 	std::cout << "Please enter the index of the contact" << std::endl;
 	if (std::getline(std::cin, index) && allDigits(index)) {
 		if (std::stoi(index) > 0 && std::stoi(index) <= numContacts) {
