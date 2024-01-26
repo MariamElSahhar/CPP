@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:34:45 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:39:32 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 20:00:31 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,6 @@ Dog Dog::operator=(Dog const &a) {
 	return (*this);
 }
 
-void Dog::makeSound() {
+void Dog::makeSound() const {
 	std::cout << "bark 🐶" << std::endl;
 }

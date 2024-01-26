@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:34:01 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:39:37 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 20:04:17 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
-
 
 Cat::Cat () {
 	std::cout << "Cat constructor called." << std::endl;
@@ -35,6 +34,6 @@ Cat Cat::operator=(Cat const &a) {
 	return (*this);
 }
 
-void Cat::makeSound() {
+void Cat::makeSound() const {
 	std::cout << "meow 🐱" << std::endl;
 }

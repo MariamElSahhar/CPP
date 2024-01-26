@@ -6,7 +6,7 @@
 #    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2024/01/24 20:11:51 by melsahha         ###   ########.fr        #
+#    Updated: 2024/01/26 20:53:44 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = animal
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra
 
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
