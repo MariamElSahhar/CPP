@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 22:06:42 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 20:59:28 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 19:24:40 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void    Harl::complain( std::string level ) {
 
     switch (level_num)
     {
-        case 4:
+        default:
             std::cout << "[angry muttering]" << std::endl;
             break;
         case 0:
