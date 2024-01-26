@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 18:09:45 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/25 21:30:33 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 19:47:29 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,8 @@ FragTrap &FragTrap::operator=(FragTrap const &ct) {
 	return (*this);
 }
 
-FragTrap::FragTrap(FragTrap const &ct) {
+FragTrap::FragTrap(FragTrap const &ct) : ClapTrap(ct._name) {
 	std::cout << "FragTrap copy constructor called." << std::endl;
-	_name = ct._name;
 	_attack = ct._attack;
 	_hit = ct._hit;
 	_energy = ct._energy;
