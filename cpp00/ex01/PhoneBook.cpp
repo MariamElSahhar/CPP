@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:30:04 by melsahha          #+#    #+#             */
-/*   Updated: 2023/10/22 17:51:44 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:14:22 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,36 @@ PhoneBook::PhoneBook(): numContacts (0), nextSlot(0) {}
 
 void PhoneBook::requestContact() {
 	std::string fn, ln, nn, secret, num;
+
 	std::cout	<< "First name:  ";
 	std::getline(std::cin, fn);
+
 	std::cout	<< "Last name:  ";
 	std::getline(std::cin, ln);
+
 	std::cout	<< "Nickname:  ";
 	std::getline(std::cin, nn);
+
 	std::cout	<< "Darkest secret:  ";
 	std::getline(std::cin, secret);
+
 	std::cout	<< "Phone number:  ";
 	std::getline(std::cin, num);
+
 	std::cout	<< std::endl;
-	Contact newContact(fn, ln, nn, secret, num);
-	addContact(newContact);
+
+	if (!fn.length() || !ln.length() || !nn.length() || !secret.length() || !num.length()) {
+		std::cout << "Invalid contact: empty fields" << std::endl << std::endl;
+		return ;
+	}
+	else if (!allDigits(num)) {
+		std::cout << "Invalid contact: phone number must be numeric" << std::endl << std::endl;
+		return ;
+	}
+	else {
+		Contact newContact(fn, ln, nn, secret, num);
+		addContact(newContact);
+	}
 }
 
 void PhoneBook::addContact(const Contact& newContact) {

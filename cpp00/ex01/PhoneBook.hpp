@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:16:59 by melsahha          #+#    #+#             */
-/*   Updated: 2023/10/22 17:31:45 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/26 17:13:49 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class PhoneBook {
 		void	displayContacts() const;
 		bool	allDigits(std::string index) const;
 		void	displayContact(int index) const;
-	public:
+   	public:
 		PhoneBook();
 		void	requestContact();
 		void	searchContact() const;
