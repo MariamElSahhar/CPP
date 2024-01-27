@@ -3,34 +3,31 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
+#    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2024/01/26 20:53:44 by melsahha         ###   ########.fr        #
+#    Updated: 2024/01/27 19:59:35 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = animal
 CXX = c++
-CXXFLAGS = -Wall -Werror -Wextra
+CXXFLAGS = -std=c++98 -Wall -Werror -Wextra
 
 SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) $(NAME) -o $(OBJ)
 
 all: $(NAME)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)
 
 fclean: clean
 	rm -f $(NAME)
-	
+
 re: fclean all
 
 .PHONY: all clean fclean re
