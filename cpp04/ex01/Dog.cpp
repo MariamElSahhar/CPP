@@ -6,15 +6,14 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:34:45 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/28 13:32:59 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 14:15:38 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog () {
+Dog::Dog () : Animal("dog") {
 	std::cout << "Dog constructor called." << std::endl;
-	_type = "dog";
 	_brain = new Brain();
 }
 
@@ -23,19 +22,16 @@ Dog::~Dog () {
 	delete _brain;
 }
 
-Dog::Dog (Dog const &a) : Animal(a) {
+Dog::Dog (Dog const &a) {
 	std::cout << "Dog copy constructor called." << std::endl;
-	if (&a != this) {
-		*this = a;
-		_brain = a._brain;
-	}
+	*this = a;
 }
 
-Dog Dog::operator=(Dog const &a) {
+Dog& Dog::operator=(Dog const &a) {
 	std::cout << "Dog copy assignment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;
-		_brain = a._brain;
+		_brain = new Brain (*a._brain);
 	}
 	return (*this);
 }
