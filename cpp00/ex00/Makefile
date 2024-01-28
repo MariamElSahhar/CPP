@@ -6,7 +6,7 @@
 #    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/10 18:49:41 by melsahha          #+#    #+#              #
-#    Updated: 2024/01/27 19:57:45 by melsahha         ###   ########.fr        #
+#    Updated: 2024/01/27 19:58:22 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,6 +27,7 @@ clean:
 
 fclean: clean
 	rm -f $(NAME)
+	
 re: fclean all
 
 .PHONY: all clean fclean re

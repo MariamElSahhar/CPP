@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 20:12:05 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 17:16:54 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:49:49 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,6 @@ int	main()
 			std::cout << "Sorry, invalid input" << std::endl;
 			std::cin.clear();
 		}
-		// if (std::cin.eof())
-		// 	std::cin.ignore(std::numeric_limits<std::streamsize>::max());
 	}
 	return (0);
 }

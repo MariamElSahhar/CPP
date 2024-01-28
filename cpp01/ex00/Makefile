@@ -6,24 +6,21 @@
 #    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 21:53:39 by melsahha          #+#    #+#              #
-#    Updated: 2024/01/26 17:24:02 by melsahha         ###   ########.fr        #
+#    Updated: 2024/01/28 13:24:08 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = BraiiiiiiinnnzzzZ
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) -o $@ $^
+	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 all: $(NAME)
-
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

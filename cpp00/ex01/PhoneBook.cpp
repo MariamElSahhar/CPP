@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:30:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 17:29:48 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/27 19:56:48 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void PhoneBook::requestContact() {
 
 	std::cout	<< std::endl;
 
-	if (!fn.length() || !ln.length() || !nn.length() || !secret.length() || !num.length()) {
+	if (!fn.empty() || !ln.empty() || !nn.empty() || !secret.empty() || !num.empty()
+	|| allSpace(fn) || allSpace(ln) || allSpace(nn) || allSpace(secret)) {
 		std::cout << "Invalid contact: empty fields" << std::endl << std::endl;
 		return ;
 	}
@@ -88,10 +89,18 @@ void PhoneBook::displayContact(int index) const {
 
 bool PhoneBook::allDigits(std::string index) const {
 	for (std::string::size_type i = 0; i < index.length(); ++i)
-		if (!isdigit(index[i]))
+		if (!std::isdigit(index[i]))
 			return false;
 	return true;
 }
+
+bool	PhoneBook::allSpace(std::string str) const {
+	unsigned long i = 0;
+	while (std::isspace(str[i]))
+		i++;
+	return (i == str.length());
+}
+
 
 bool PhoneBook::searchContact() const {
 	std::string index;
