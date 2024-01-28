@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:25:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 21:06:50 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:32:12 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Brain::~Brain () {
 }
 
 Brain::Brain (Brain const &a) {
+	std::cout << "Brain copy constructor called." << std::endl;
 	if (&a != this) {
 		for (int i = 0; i < 100; i++)
             _ideas[i] = a._ideas[i];
@@ -30,6 +31,7 @@ Brain::Brain (Brain const &a) {
 }
 
 Brain Brain::operator=(Brain const &a) {
+	std::cout << "Brain copy assignment operator called." << std::endl;
 	if (&a != this) {
         for (int i = 0; i < 100; i++)
             _ideas[i] = a._ideas[i];

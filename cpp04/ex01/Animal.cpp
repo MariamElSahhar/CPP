@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:25:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 21:06:58 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:33:24 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ Animal::~Animal () {
 }
 
 Animal::Animal (Animal const &a) {
+	std::cout << "Animal copy constructor called." << std::endl;
 	if (&a != this) {
 		*this = a;
 	}
 }
 
 Animal Animal::operator=(Animal const &a) {
+	std::cout << "Animal copy assignment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;
 	}
