@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:25:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/28 13:39:05 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 14:22:59 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ WrongAnimal::WrongAnimal (WrongAnimal const &a) {
 	}
 }
 
-WrongAnimal WrongAnimal::operator=(WrongAnimal const &a) {
+WrongAnimal& WrongAnimal::operator=(WrongAnimal const &a) {
 	std::cout << "WrongAnimal assingment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;

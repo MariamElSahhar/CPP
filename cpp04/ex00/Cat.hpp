@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:14:10 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:00:29 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 14:22:42 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Cat : public Animal {
         Cat ();
 		~Cat ();
 		Cat (Cat const &a);
-		Cat operator=(Cat const &a);
+		Cat& operator=(Cat const &a);
 
 		void makeSound() const;
 };

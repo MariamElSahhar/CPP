@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:34:45 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/28 13:40:59 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 14:23:03 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Dog::Dog (Dog const &a) {
 	}
 }
 
-Dog Dog::operator=(Dog const &a) {
+Dog& Dog::operator=(Dog const &a) {
 	std::cout << "Dog copy assignment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;

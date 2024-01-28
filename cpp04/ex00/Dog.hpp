@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:12:43 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:04:34 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 14:22:46 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Dog : public Animal {
         Dog ();
 		~Dog ();
 		Dog (Dog const &a);
-		Dog operator=(Dog const &a);
+		Dog& operator=(Dog const &a);
 
 		void makeSound() const;
 };
