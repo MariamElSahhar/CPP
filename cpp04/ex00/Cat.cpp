@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:34:01 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:04:17 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:40:53 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,18 @@ Cat::Cat () {
 }
 
 Cat::~Cat () {
-	std::cout << "Cat desctructor called." << std::endl;
+	std::cout << "Cat destructor called." << std::endl;
 }
 
 Cat::Cat (Cat const &a) {
+	std::cout << "Cat copy constructor called." << std::endl;
 	if (&a != this) {
 		*this = a;
 	}
 }
 
 Cat Cat::operator=(Cat const &a) {
+	std::cout << "Cat copy assignment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;
 	}

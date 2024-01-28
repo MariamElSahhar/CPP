@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:34:01 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:08:31 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:39:17 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ WrongCat::~WrongCat () {
 }
 
 WrongCat::WrongCat (WrongCat const &a) {
+	std::cout << "WrongCat copy constructor called." << std::endl;
 	if (&a != this) {
 		*this = a;
 	}
 }
 
 WrongCat WrongCat::operator=(WrongCat const &a) {
+	std::cout << "WrongCat assingment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;
 	}

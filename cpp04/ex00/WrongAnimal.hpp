@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:13:31 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:08:50 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:44:57 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

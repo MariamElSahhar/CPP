@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:13:31 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:05:59 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:42:27 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Animal {
 
     public:
         Animal ();
-		~Animal ();
+		virtual ~Animal ();
 		Animal (Animal const &a);
 		Animal operator=(Animal const &a);
 

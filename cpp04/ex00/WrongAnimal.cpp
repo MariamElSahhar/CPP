@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 21:25:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 20:08:17 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/28 13:39:05 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,14 @@ WrongAnimal::~WrongAnimal () {
 }
 
 WrongAnimal::WrongAnimal (WrongAnimal const &a) {
+	std::cout << "WrongAnimal copy constructor called." << std::endl;
 	if (&a != this) {
 		*this = a;
 	}
 }
 
 WrongAnimal WrongAnimal::operator=(WrongAnimal const &a) {
+	std::cout << "WrongAnimal assingment operator called." << std::endl;
 	if (&a != this) {
 		_type = a._type;
 	}
