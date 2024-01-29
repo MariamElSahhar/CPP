@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:30:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/27 19:56:48 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/29 18:55:10 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void PhoneBook::requestContact() {
 
 	std::cout	<< std::endl;
 
-	if (!fn.empty() || !ln.empty() || !nn.empty() || !secret.empty() || !num.empty()
+	if (fn.empty() || ln.empty() || nn.empty() || secret.empty() || num.empty()
 	|| allSpace(fn) || allSpace(ln) || allSpace(nn) || allSpace(secret)) {
 		std::cout << "Invalid contact: empty fields" << std::endl << std::endl;
 		return ;
