@@ -6,11 +6,11 @@
 #    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2024/01/28 13:24:56 by melsahha         ###   ########.fr        #
+#    Updated: 2024/01/29 17:47:44 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = brain
+NAME = violence
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Werror -Wextra
 
