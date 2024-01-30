@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 22:04:40 by melsahha          #+#    #+#             */
-/*   Updated: 2023/12/06 22:26:01 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/30 19:43:08 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@
         private:
             std::string name;
         public:
-            Zombie(std::string n);
+            Zombie(const std::string &n);
+
             ~Zombie();
-            
+
             void    announce(void);
     };
 

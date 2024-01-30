@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 21:55:13 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/26 19:10:50 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/30 20:20:19 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define WEAPON_HPP
 
 #include <string>
+#include <iostream>
 
 class Weapon
 {
