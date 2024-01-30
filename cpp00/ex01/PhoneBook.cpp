@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 19:30:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/29 18:55:10 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/01/30 14:14:28 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,9 +111,9 @@ bool PhoneBook::searchContact() const {
 	}
 	std::cout << "Please enter the index of the contact" << std::endl;
 	if (std::getline(std::cin, index) && allDigits(index)) {
-		if (std::stoi(index) > 0 && std::stoi(index) <= numContacts) {
+		if (std::atoi(index.c_str()) > 0 && std::atoi(index.c_str()) <= numContacts) {
 			std::cout << std::endl;
-			displayContact(std::stoi(index));
+			displayContact(std::atoi(index.c_str()));
 		}
 
 		else
