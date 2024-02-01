@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/04 14:05:26 by melsahha          #+#    #+#             */
-/*   Updated: 2024/01/23 15:52:29 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/02/01 18:11:46 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,16 @@ Fixed::Fixed(const int i) : _value(i << _fractionalBits) {
 
 Fixed::Fixed(const float f) : _value(roundf(f * (1 << _fractionalBits))) {
     std::cout << "Float constructor called" << std::endl;
-    
 }
 
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
 }
 
-
-Fixed Fixed::operator=(Fixed const& f) {
-    std::cout << "Copy operator called" << std::endl;
+Fixed& Fixed::operator=(Fixed const& f) {
+    std::cout << "Copy assignment operator called" << std::endl;
     if (this != &f)
-        _value = f._value;
+        this->_value = f._value;
     return *this;
 }
 
