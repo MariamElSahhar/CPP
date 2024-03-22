@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 14:28:06 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/22 16:11:08 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,23 @@ class Bureaucrat {
 		Bureaucrat& operator++(int);
 		Bureaucrat& operator--(int);
 		const std::string getName() const;
-		const int	getGrade() const;
+		int	getGrade() const;
+
+		class GradeTooHighException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw() {
+					return "Grade over 1";
+				}
+		};
+
+		class GradeTooLowException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw() {
+					return "Grade under 150";
+				}
+		};
 };
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj);

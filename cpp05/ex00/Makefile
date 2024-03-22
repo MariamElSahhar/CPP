@@ -6,7 +6,7 @@
 #    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2024/03/22 14:22:36 by melsahha         ###   ########.fr        #
+#    Updated: 2024/03/22 16:11:36 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = beureaucrat
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Werror -Wextra
 
-SRC = main.cpp Beureaucrat.cpp
+SRC = main.cpp Bureaucrat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
