@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 17:14:20 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:20:29 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ class Form {
 		{
 			public:
 				virtual const char *what() const throw() {
-					return "Grade over 1";
+					return "Grade too high";
 				}
 		};
 
@@ -52,7 +52,7 @@ class Form {
 		{
 			public:
 				virtual const char *what() const throw() {
-					return "Grade under 150";
+					return "Grade too low";
 				}
 		};
 };

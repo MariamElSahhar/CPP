@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 17:01:27 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:20:38 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ class Bureaucrat {
 		const std::string getName() const;
 		int	getGrade() const;
 
-		void	signForm(const Form& f);
+		void	signForm(Form& f);
 
 		class GradeTooHighException : public std::exception
 		{
 			public:
 				virtual const char *what() const throw() {
-					return "Grade over 1";
+					return "Grade too high";
 				}
 		};
 
@@ -50,7 +50,7 @@ class Bureaucrat {
 		{
 			public:
 				virtual const char *what() const throw() {
-					return "Grade under 150";
+					return "Grade too low";
 				}
 		};
 };

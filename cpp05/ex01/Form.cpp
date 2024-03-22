@@ -18,7 +18,12 @@ Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false)
 		throw GradeTooHighException();
 	else if (sg > 150 || eg > 150)
 		throw GradeTooLowException();
-	std::cout << "Form called "<< this->name << " created." << std::endl;
+	else
+	{
+		this->exec_grade = eg;
+		this->sign_grade = sg;
+		std::cout << "Form called "<< this->name << " created." << std::endl;
+	}
 }
 
 Form::~Form ()
@@ -31,7 +36,7 @@ const std::string Form::getName() const
 	return (this->name);
 }
 
-int Form::getSigned() const
+bool Form::getSigned() const
 {
 	return (this->is_signed);
 }
@@ -48,7 +53,7 @@ int Form::getExecGrade() const
 
 std::ostream& operator<<(std::ostream& os, const Form& obj)
 {
-	os << obj.getName() << ", Form signature grade " << obj.getSignGrade() << ", execution grade" << obj.getExecGrade() << "is ";
+	os << obj.getName() << ", Form signature grade " << obj.getSignGrade() << ", execution grade " << obj.getExecGrade() << " is ";
 	if (obj.getSigned())
 		os << "signed.\n";
 	else

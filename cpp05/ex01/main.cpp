@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:23:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 16:41:07 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:22:50 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 
 int main(void)
 {
-	Bureaucrat b("Pano", 150);
-	std::cout << b;
-	b++;
 	try {
-		b--;
-		b--;
+		Bureaucrat b("Pano", 200);
+		Form f("go to school", 40, 3);
+		std::cout << b;
+		std::cout << f;
+		b.signForm(f);
 	}
 	catch (const Bureaucrat::GradeTooHighException& e){
 		std::cout << "Error: " << e.what() << std::endl;

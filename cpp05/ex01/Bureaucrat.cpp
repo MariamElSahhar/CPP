@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:47 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 17:15:05 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:22:14 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ Bureaucrat& Bureaucrat::operator--(int) {
 	}
 }
 
-void	Bureaucrat::signForm(const Form& f)
+void	Bureaucrat::signForm(Form& f)
 {
 	if (this->grade > f.getSignGrade())
 	{
@@ -75,6 +75,7 @@ void	Bureaucrat::signForm(const Form& f)
 	}
 	else
 	{
-		f->beSigned(*this);
+		std::cout << this->name << " signed form " << f.getName() << std::endl;
+		f.beSigned(*this);
 	}
 }
