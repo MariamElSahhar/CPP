@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:47 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 17:22:14 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/24 14:13:01 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,10 +69,7 @@ Bureaucrat& Bureaucrat::operator--(int) {
 void	Bureaucrat::signForm(Form& f)
 {
 	if (this->grade > f.getSignGrade())
-	{
-		std::cout << this->name << " coudln't sign form " << f.getName() << " because ";
-		throw GradeTooLowException();
-	}
+		std::cout << this->name << " coudln't sign form " << f.getName() << " because grade is too low." << std::endl;
 	else
 	{
 		std::cout << this->name << " signed form " << f.getName() << std::endl;
