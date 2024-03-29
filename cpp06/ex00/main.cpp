@@ -3,16 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 09:19:17 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/26 09:19:40 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/29 14:53:49 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-int	main(void)
+int	main(int argc, char *argv[])
 {
+	if (argc == 2)
+		ScalarConverter::convert(argv[1]);
+	else
+		std::cout << "Please enter one argument" << std::endl;
 	return (0);
 }

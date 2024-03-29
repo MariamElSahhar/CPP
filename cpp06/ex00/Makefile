@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
+#    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/26 09:23:23 by melsahha          #+#    #+#              #
-#    Updated: 2024/03/26 09:23:37 by melsahha         ###   ########.fr        #
+#    Updated: 2024/03/29 14:52:13 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,4 +30,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+run: $(NAME)
+	./$(NAME)
+
+.PHONY: all clean fclean re run
