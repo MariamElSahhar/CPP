@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:47 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/24 14:57:00 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/24 17:02:17 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,17 @@ Bureaucrat::Bureaucrat(Bureaucrat const &b) : name(b.name), grade(b.grade)
 	std::cout << "Bureaucrat called "<< this->name << " copied." << std::endl;
 }
 
+Bureaucrat&	Bureaucrat::operator=( const Bureaucrat& b ) {
+	 if ( this != &b )
+	 {
+		grade = b.getGrade();
+	 }
+	 return *this;
+}
+
 Bureaucrat::~Bureaucrat ()
 {
-	std::cout << "Bureaucrat called "<< this->name << " destroyed." << std::endl;
+	std::cout << *this << " destroyed." << std::endl;
 }
 
 const std::string Bureaucrat::getName() const
@@ -45,7 +53,7 @@ int Bureaucrat::getGrade() const
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj)
 {
-	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".\n";
+	os << obj.getName() << ", bureaucrat grade " << obj.getGrade();
 	return (os);
 }
 
@@ -76,10 +84,23 @@ void	Bureaucrat::signForm(Form& f)
 	try
 	{
 		f.beSigned(*this);
-		std::cout << *this << " signed " << f.getName() << std::endl;
+		std::cout << *this << " signed " << f << std::endl;
 	}
 	catch (Form::GradeTooLowException &e)
 	{
-		std::cout << this->name << " couldn't sign form " << f.getName() << " because " << e.what() << std::endl;
+		std::cout << *this << " couldn't sign form " << f << " because " << e.what() << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(Form& f)
+{
+	try
+	{
+		f.execute(*this);
+		std::cout << *this << " executed form " << f << std::endl;
+	}
+	catch (Form::GradeTooLowException &e)
+	{
+		std::cout << *this << " couldn't sign form " << f.getName() << " because " << e.what() << std::endl;
 	}
 }

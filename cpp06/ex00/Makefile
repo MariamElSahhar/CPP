@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2024/03/24 17:05:00 by melsahha         ###   ########.fr        #
+#    Created: 2024/03/26 09:23:23 by melsahha          #+#    #+#              #
+#    Updated: 2024/03/26 09:23:37 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = beureaucrat
+NAME = convert
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Werror -Wextra
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRC = main.cpp ScalarConverter.cpp
 OBJ = $(SRC:.cpp=.o)
 
 $(NAME): $(OBJ)
@@ -24,15 +24,10 @@ all: $(NAME)
 
 clean:
 	rm -f $(OBJ)
-	rm -rf *_shrubbery
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
-run: $(NAME)
-	clear
-	./$(NAME)
-
-.PHONY: all clean fclean re run
+.PHONY: all clean fclean re

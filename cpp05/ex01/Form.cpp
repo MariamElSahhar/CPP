@@ -26,6 +26,14 @@ Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false)
 	}
 }
 
+Form&	Form::operator=( const Form& f ) {
+	if ( this != &f )
+		is_signed = f.getSigned();
+	return *this;
+}
+
+Form::Form (Form const &f) : name(f.name), is_signed(false), exec_grade(f.exec_grade), sign_grade(f.sign_grade) {}
+
 Form::~Form ()
 {
 	std::cout << "Form called "<< this->name << " destroyed." << std::endl;

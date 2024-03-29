@@ -26,10 +26,17 @@ Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false)
 	}
 }
 
-Form::Form (Form const &f) : name(f.name), is_signed(false), exec_grade(f.exec_grade), sign_grade(f.sign_grade) {}
+Form::Form (Form const &f) : name(f.name), is_signed(false), sign_grade(f.sign_grade), exec_grade(f.exec_grade) {}
 
+Form&	Form::operator=( const Form& f ) {
+	if ( this != &f )
+		is_signed = f.getSigned();
+	return *this;
+}
 
-Form::~Form () {}
+Form::~Form () {
+	std::cout << *this << " destroyed." << std::endl;
+}
 
 const std::string Form::getName() const
 {
@@ -53,11 +60,7 @@ int Form::getExecGrade() const
 
 std::ostream& operator<<(std::ostream& os, const Form& f)
 {
-	os << f.getName() << ", Form signature grade " << f.getSignGrade() << ", execution grade " << f.getExecGrade() << " is ";
-	if (f.getSigned())
-		os << "signed.\n";
-	else
-		os << "unsigned.\n";
+	os << f.getName() << " Form signature grade " << f.getSignGrade() << ", execution grade " << f.getExecGrade();
 	return (os);
 }
 

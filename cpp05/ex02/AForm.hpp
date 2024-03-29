@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/24 15:00:45 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:45:52 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ class Form {
 
 		// FUNCTIONS
 		void	beSigned(const Bureaucrat& b);
-		virtual void	execute(Bureaucrat const &executor) = 0;
+		virtual void	execute(Bureaucrat const &b) = 0;
 
 		// EXCEPTIONS
 		class GradeTooHighException : public std::exception
@@ -62,7 +62,7 @@ class Form {
 				}
 		};
 
-		class FormUnsigned : public std::exception
+		class FormUnsignedException : public std::exception
 		{
 			public:
 				virtual const char *what() const throw() {

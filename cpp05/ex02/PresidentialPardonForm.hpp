@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:03:36 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/24 16:05:59 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/24 16:49:12 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class PresidentialPardonForm : public Form {
 
 		PresidentialPardonForm& operator=( const PresidentialPardonForm& f );
 
-		void execute( const Bureaucrat& b ) const;
-}
+		void execute(Bureaucrat const &b);
+};
 
 #endif

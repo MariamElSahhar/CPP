@@ -6,34 +6,38 @@
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:23:04 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/24 14:13:52 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/24 17:04:07 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 int main(void)
 {
 	try {
-		Bureaucrat b("Pano", 130);
-		Form f("go to school", 40, 3);
-		std::cout << b;
-		std::cout << f;
-		b.signForm(f);
-		f.beSigned(b);
-	}
-	catch (const Bureaucrat::GradeTooHighException& e){
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	catch (const Bureaucrat::GradeTooLowException& e){
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	catch (const Form::GradeTooHighException& e){
-		std::cout << "Error: " << e.what() << std::endl;
-	}
-	catch (const Form::GradeTooLowException& e){
-		std::cout << "Error: " << e.what() << std::endl;
+		Bureaucrat bureaucrat("ash", 2);
+		ShrubberyCreationForm form1("Shrubbery");
+		RobotomyRequestForm form2("Robotomy");
+		PresidentialPardonForm form3("President");
+
+		std::cout << "\n--------------- Form 1 ( Shrubbery ) ---------------" << std::endl;
+		bureaucrat.signForm(form1);
+		bureaucrat.executeForm(form1);
+		std::cout << "\n--------------- Form 2 ( Robotomy ) ---------------" << std::endl;
+		bureaucrat.signForm(form2);
+		bureaucrat.executeForm(form2);
+		bureaucrat.executeForm(form2);
+		bureaucrat.executeForm(form2);
+		bureaucrat.executeForm(form2);
+		std::cout << "\n--------------- Form 3 ( President ) ---------------" << std::endl;
+		bureaucrat.signForm(form3);
+		bureaucrat.executeForm(form3);
+	} catch (std::exception &e) {
+		std::cout << e.what() << std::endl;
 	}
 	return 0;
 }

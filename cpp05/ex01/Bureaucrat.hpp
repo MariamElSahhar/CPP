@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 17:20:38 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/24 14:51:42 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Bureaucrat {
 	public:
 		Bureaucrat (std::string n, int g);
 		~Bureaucrat ();
-		Bureaucrat (Bureaucrat const &a);
+		Bureaucrat (Bureaucrat const &b);
 
 		Bureaucrat& operator=(Bureaucrat const &a);
 		Bureaucrat& operator++(int);

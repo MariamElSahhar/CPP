@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
+#    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/06 22:31:10 by melsahha          #+#    #+#              #
-#    Updated: 2024/03/22 16:11:36 by melsahha         ###   ########.fr        #
+#    Updated: 2024/03/26 09:23:02 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,3 +31,4 @@ fclean: clean
 re: fclean all
 
 .PHONY: all clean fclean re
+

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:47 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 16:15:20 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/25 17:43:48 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,18 @@ Bureaucrat::Bureaucrat(std::string n, int g) : name(n)
 {
 	this->grade = g;
 	std::cout << "Bureaucrat called "<< this->name << " created." << std::endl;
+}
+
+Bureaucrat::Bureaucrat(Bureaucrat const &b) : name(b.name), grade(b.grade)
+{
+	std::cout << "Bureaucrat called "<< this->name << " copied." << std::endl;
+}
+
+Bureaucrat&	Bureaucrat::operator=( const Bureaucrat& b ) {
+	std::cout << "Bureaucrat copy assignement constrcutor called." << std::endl;
+	 if ( this != &b )
+		grade = b.getGrade();
+	 return *this;
 }
 
 Bureaucrat::~Bureaucrat ()
