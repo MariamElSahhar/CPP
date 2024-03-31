@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 16:14:39 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/31 16:15:36 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/03/31 16:17:00 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,18 @@
 
 #include "whatever.hpp"
 
-int main() {
-	int x = 5, y = 10;
-	std::cout << "Before swap: x = " << x << ", y = " << y << std::endl;
-	swap(x, y);
-	std::cout << "After swap: x = " << x << ", y = " << y << std::endl;
-
-	double a = 3.5, b = 2.8;
-	std::cout << "Minimum of " << a << " and " << b << " is: " << min(a, b) << std::endl;
-	std::cout << "Maximum of " << a << " and " << b << " is: " << max(a, b) << std::endl;
-
+int main( void ) {
+	int a = 2;
+	int b = 3;
+	::swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min( c, d ) << std::endl;
+	std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 	return 0;
 }
