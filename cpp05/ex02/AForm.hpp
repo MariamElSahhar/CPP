@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AForm.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/24 16:45:52 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 16:24:14 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ class Form {
 	private:
 		const std::string	name;
 		bool				is_signed;
-		int					sign_grade;
-		int					exec_grade;
+		const int			sign_grade;
+		const int			exec_grade;
 
 	public:
 		// BASICS

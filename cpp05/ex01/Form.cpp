@@ -12,7 +12,7 @@
 
 #include "Form.hpp"
 
-Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false)
+Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false), exec_grade(eg), sign_grade(sg)
 {
 	if (sg < 1 || eg < 1)
 		throw GradeTooHighException();
@@ -20,8 +20,6 @@ Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false)
 		throw GradeTooLowException();
 	else
 	{
-		this->exec_grade = eg;
-		this->sign_grade = sg;
 		std::cout << "Form called "<< this->name << " created." << std::endl;
 	}
 }
@@ -63,9 +61,9 @@ std::ostream& operator<<(std::ostream& os, const Form& obj)
 {
 	os << obj.getName() << ", Form signature grade " << obj.getSignGrade() << ", execution grade " << obj.getExecGrade() << " is ";
 	if (obj.getSigned())
-		os << "signed.\n";
+		os << "signed";
 	else
-		os << "unsigned.\n";
+		os << "unsigned";
 	return (os);
 }
 

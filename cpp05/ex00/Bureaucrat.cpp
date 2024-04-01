@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:47 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/25 17:43:48 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 16:15:48 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ Bureaucrat::Bureaucrat(Bureaucrat const &b) : name(b.name), grade(b.grade)
 Bureaucrat&	Bureaucrat::operator=( const Bureaucrat& b ) {
 	std::cout << "Bureaucrat copy assignement constrcutor called." << std::endl;
 	 if ( this != &b )
-		grade = b.getGrade();
+	 {
+		grade = b.grade;
+	 }
 	 return *this;
 }
 
@@ -47,28 +49,26 @@ int Bureaucrat::getGrade() const
 
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj)
 {
-	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".\n";
+	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << "." << std::endl;
 	return (os);
 }
 
-Bureaucrat& Bureaucrat::operator++(int) {
+void Bureaucrat::incrementGrade() {
 	if (this->grade == 1)
 		throw GradeTooHighException();
 	else
 	{
 		std::cout << "Bureaucrat  "<< this->name << " grade incremented." << std::endl;
 		this->grade --;
-		return *this;
 	}
 }
 
-Bureaucrat& Bureaucrat::operator--(int) {
+void Bureaucrat::decrementGrade() {
 	if (this->grade == 150)
 		throw GradeTooLowException();
 	else
 	{
 		std::cout << "Bureaucrat  "<< this->name << " grade decremented." << std::endl;
 		this->grade ++;
-		return *this;
 	}
 }

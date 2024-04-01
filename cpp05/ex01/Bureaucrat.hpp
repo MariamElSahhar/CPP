@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/24 14:51:42 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 16:21:38 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,24 @@ class Bureaucrat {
 		int					grade;
 
 	public:
+		// Constructors / Destructor
 		Bureaucrat (std::string n, int g);
-		~Bureaucrat ();
 		Bureaucrat (Bureaucrat const &b);
+		~Bureaucrat ();
 
+		// Operator
 		Bureaucrat& operator=(Bureaucrat const &a);
-		Bureaucrat& operator++(int);
-		Bureaucrat& operator--(int);
 
+		// Getters
 		const std::string getName() const;
 		int	getGrade() const;
 
+		// Methods
+		void	incrementGrade();
+		void	decrementGrade();
 		void	signForm(Form& f);
 
+		// Exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:

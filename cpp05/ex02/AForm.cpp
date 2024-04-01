@@ -12,18 +12,14 @@
 
 #include "AForm.hpp"
 
-Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false)
+Form::Form(std::string n, int sg, int eg) : name(n), is_signed(false), sign_grade(sg), exec_grade(eg)
 {
 	if (sg < 1 || eg < 1)
 		throw GradeTooHighException();
 	else if (sg > 150 || eg > 150)
 		throw GradeTooLowException();
 	else
-	{
-		this->exec_grade = eg;
-		this->sign_grade = sg;
 		std::cout << "Form called "<< this->name << " created." << std::endl;
-	}
 }
 
 Form::Form (Form const &f) : name(f.name), is_signed(false), sign_grade(f.sign_grade), exec_grade(f.exec_grade) {}

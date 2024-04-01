@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:47 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/26 09:13:38 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 16:29:21 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,31 +54,27 @@ int Bureaucrat::getGrade() const
 
 std::ostream &operator<<(std::ostream &os, const Bureaucrat &obj)
 {
-	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".\n";
+	os << obj.getName() << ", bureaucrat grade " << obj.getGrade();
 	return (os);
 }
 
-Bureaucrat &Bureaucrat::operator++(int)
-{
+void Bureaucrat::incrementGrade() {
 	if (this->grade == 1)
 		throw GradeTooHighException();
 	else
 	{
-		std::cout << "Bureaucrat  " << this->name << " grade incremented." << std::endl;
-		this->grade--;
-		return *this;
+		std::cout << "Bureaucrat  "<< this->name << " grade incremented." << std::endl;
+		this->grade --;
 	}
 }
 
-Bureaucrat &Bureaucrat::operator--(int)
-{
+void Bureaucrat::decrementGrade() {
 	if (this->grade == 150)
 		throw GradeTooLowException();
 	else
 	{
-		std::cout << "Bureaucrat  " << this->name << " grade decremented." << std::endl;
-		this->grade++;
-		return *this;
+		std::cout << "Bureaucrat  "<< this->name << " grade decremented." << std::endl;
+		this->grade ++;
 	}
 }
 

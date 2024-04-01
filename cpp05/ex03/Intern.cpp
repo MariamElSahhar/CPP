@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:53:40 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/25 17:26:28 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 16:39:13 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ Form*	makeShrubberyCreationForm(std::string target) {
 
 Form* Intern::makeForm(std::string form, std::string target)
 {
-	typedef Form *(*funcPtr)(std::string target);
+	if (form.empty() || target.empty())
+		return (0);
 
 	std::string	forms[3] = {
 		"robotomy request",
@@ -48,21 +49,19 @@ Form* Intern::makeForm(std::string form, std::string target)
 		"presidential pardon"
 	};
 
+	typedef Form *(*funcPtr)(std::string target);
 	funcPtr makeForm[3] = {
 		&makeRobotomyRequestForm,
 		&makeShrubberyCreationForm,
 		&makePresidentialPardonForm
 	};
 
-	if (!form.empty() && !target.empty())
+	for (int i = 0; i < 3; i ++)
 	{
-		for (int i = 0; i < 3; i ++)
+		if (form == forms[i])
 		{
-			if (form == forms[i])
-			{
-				std::cout << "Intern creates " << form << " Form." << std::endl;
-				return (makeForm[i](target));
-			}
+			std::cout << "Intern creates " << form << " Form." << std::endl;
+			return (makeForm[i](target));
 		}
 	}
 	std::cout << "Form information missing." << std::endl;

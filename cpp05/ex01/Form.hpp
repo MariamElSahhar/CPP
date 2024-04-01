@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 14:22:44 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/22 17:20:29 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 16:26:36 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,28 @@ class Form {
 	private:
 		const std::string	name;
 		bool				is_signed;
-		int					sign_grade;
-		int					exec_grade;
+		const int			exec_grade;
+		const int			sign_grade;
 
 	public:
+		// Constuctors / Destructor
 		Form (std::string n, int sg, int eg);
-		~Form ();
 		Form (Form const &a);
+		~Form ();
 
+		// Operators
 		Form& operator=(Form const &a);
 
+		// Getters
 		bool				getSigned() const;
 		const std::string	getName() const;
 		int					getSignGrade() const;
 		int					getExecGrade() const;
 
+		// Methods
 		void	beSigned(const Bureaucrat& b);
 
+		// Exceptions
 		class GradeTooHighException : public std::exception
 		{
 			public:
