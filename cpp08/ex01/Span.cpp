@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 10:20:36 by melsahha          #+#    #+#             */
-/*   Updated: 2024/04/01 11:19:58 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 17:49:39 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,14 @@ void Span::addNumber(int n)
 	if (_list.size() == _maxSize)
 		throw MaxSizeReached();
 	_list.push_back(n);
+}
+
+void Span::addNumber(std::list<int>::iterator start, std::list<int>::iterator finish)
+{
+	if (std::distance(start, finish) + _list.size() > _maxSize)
+		throw MaxSizeReached();
+	for (; start != finish; start++)
+		addNumber(*start);
 }
 
 int Span::longestSpan()

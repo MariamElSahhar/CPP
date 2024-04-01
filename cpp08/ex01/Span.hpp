@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/01 10:13:24 by melsahha          #+#    #+#             */
-/*   Updated: 2024/04/01 11:12:15 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/01 17:46:07 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ public:
 	// Operators
 	Span &operator=(Span const &a);
 
-	// Functions
+	// Methods
 	void addNumber(int n);
+	void addNumber(std::list<int>::iterator start, std::list<int>::iterator finish);
 	int shortestSpan();
 	int longestSpan();
 	void printList();
