@@ -6,33 +6,33 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 09:19:06 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/29 15:27:58 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/02 16:28:45 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-// ScalarConverter::ScalarConverter()
-// {
-// 	std::cout << "ScalarConverter constructor called." << std::endl;
-// }
+ScalarConverter::ScalarConverter()
+{
+	std::cout << "ScalarConverter constructor called." << std::endl;
+}
 
-// ScalarConverter::ScalarConverter( ScalarConverter const &s )
-// {
-// 	std::cout << "ScalarConverter copy constructor called." << std::endl;
-// }
+ScalarConverter::ScalarConverter( ScalarConverter const &s )
+{
+	(void)s;
+	std::cout << "ScalarConverter copy constructor called." << std::endl;
+}
 
-// ScalarConverter&	ScalarConverter::operator=( ScalarConverter const &s ) {
-// 	std::cout << "ScalarConverter copy assignement constructor called." << std::endl;
-// 	 if ( this != &s )
-// 	//  SOMETHING
-// 	 return *this;
-// }
+ScalarConverter&	ScalarConverter::operator=( ScalarConverter const &s ) {
+	std::cout << "ScalarConverter copy assignement constructor called." << std::endl;
+	(void)s;
+	return *this;
+}
 
-// ScalarConverter::~ScalarConverter ()
-// {
-// 	std::cout << "ScalarConverter destructor called." << std::endl;
-// }
+ScalarConverter::~ScalarConverter ()
+{
+	std::cout << "ScalarConverter destructor called." << std::endl;
+}
 
 int	whatNumber(std::string s)
 {

@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 09:18:36 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/29 15:27:36 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/02 16:27:34 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ enum NumberType
 class ScalarConverter
 {
 private:
+	ScalarConverter();
+	~ScalarConverter();
+	ScalarConverter(const ScalarConverter &s);
+	ScalarConverter& operator=(const ScalarConverter &s);
 	static void		printChar(std::string s);
 	static void		printInt(std::string s);
 	static void		printFloat(std::string s);
