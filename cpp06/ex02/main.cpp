@@ -6,22 +6,29 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 16:16:49 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/29 16:31:14 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/02 16:49:28 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Base.hpp"
+#include <time.h>
+// #include <thread>
+// #include <chrono>
 
 Base* generate(void)
 {
-	if (std::rand() % 3 == 1)
+	srand(time(NULL));
+	int rand = std::rand() % 3;
+	// std::this_thread::sleep_for(std::chrono::milliseconds(500));
+	if (rand == 0)
 		return (new A());
-	else if (std::rand() % 3 == 2)
+	else if (rand == 1)
 		return (new B());
-	else if (std::rand() % 3 == 3)
+	else if (rand == 2)
 		return (new C());
 	else
 		return (0);
+
 }
 
 void identify(Base* p) {
@@ -67,6 +74,7 @@ void identify(Base& p)
 
 int	main(void)
 {
+
 	Base*	a = generate();
 	Base*	b = generate();
 	Base*	c = generate();
