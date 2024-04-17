@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 09:18:36 by melsahha          #+#    #+#             */
-/*   Updated: 2024/04/02 16:27:34 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:50:50 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ enum NumberType
 	INTEGER,
 	DOUBLE,
 	FLOAT,
+	CHAR,
 };
 
 class ScalarConverter

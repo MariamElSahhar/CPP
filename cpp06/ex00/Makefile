@@ -6,7 +6,7 @@
 #    By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/26 09:23:23 by melsahha          #+#    #+#              #
-#    Updated: 2024/03/29 15:44:35 by melsahha         ###   ########.fr        #
+#    Updated: 2024/04/17 17:43:22 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,11 @@ re: fclean all
 
 run: $(NAME)
 	./$(NAME)
+
+tests: $(NAME)
+	./$(NAME) 0
+	./$(NAME) nan
+	./$(NAME) 42.0f
+
 
 .PHONY: all clean fclean re run

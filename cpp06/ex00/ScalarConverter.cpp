@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 09:19:06 by melsahha          #+#    #+#             */
-/*   Updated: 2024/04/02 16:28:45 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/17 17:53:36 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ ScalarConverter::~ScalarConverter ()
 
 int	whatNumber(std::string s)
 {
+	if (s.length() == 1 && std::isalpha(s[0]))
+		return (CHAR);
 	int i = 0;
 	if (s[i] && (s[i] == '-' || s[i] == '+'))
 		i++;
@@ -79,6 +81,8 @@ int ScalarConverter::converttoInt(std::string s)
 		return (static_cast<int>(std::stof(s)));
 	else if (type == DOUBLE)
 		return (static_cast<int>(std::stod(s)));
+	else if (type == CHAR)
+		return (static_cast<int>(s[0]));
 	else
 		return (0);
 }
@@ -116,7 +120,7 @@ void ScalarConverter::printFloat(std::string s)
 	std::cout << "float: ";
 	 if (s == "nan" || s == "inf" || s == "-inf" || s == "+inf")
 	 	std::cout << s << "f";
-	 if (s == "inff" || s == "+inff" || s == "-inff")
+	else if (s == "inff" || s == "+inff" || s == "-inff")
 		std::cout << s;
 	else if (whatNumber(s) == INTEGER)
 		std::cout << converttoInt(s) << ".0f";
@@ -130,6 +134,8 @@ void ScalarConverter::printFloat(std::string s)
 	}
 	else if (whatNumber(s) == FLOAT)
 		std::cout << s;
+	else if (whatNumber(s) == CHAR)
+		std::cout << converttoInt(s) << ".0f";
 	else
 		std::cout << "nan";
 	std::cout << std::endl;
@@ -140,9 +146,9 @@ void ScalarConverter::printDouble(std::string s)
 	std::cout << "double: ";
 	 if (s == "nan" || s == "inf" || s == "-inf" || s == "+inf")
 	 	std::cout << s;
-	 if (s == "inff")
+	else if (s == "inff")
 	 	std::cout << "inf";
-	 if (s == "+inff" || s == "-inff")
+	else if (s == "+inff" || s == "-inff")
 		std::cout << s.substr(0, 3);
 	else if (whatNumber(s) == INTEGER)
 		std::cout << converttoInt(s) << ".0";
@@ -150,6 +156,8 @@ void ScalarConverter::printDouble(std::string s)
 		std::cout << std::stod(s);
 	else if (whatNumber(s) == FLOAT)
 		std::cout << s.substr(0, s.length() - 1);
+	else if (whatNumber(s) == CHAR)
+		std::cout << converttoInt(s) << ".0";
 	else
 		std::cout << "nan";
 	std::cout << std::endl;
