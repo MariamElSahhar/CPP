@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 09:19:06 by melsahha          #+#    #+#             */
-/*   Updated: 2024/04/17 17:53:36 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:41:38 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,9 +118,11 @@ void ScalarConverter::printInt(std::string s)
 void ScalarConverter::printFloat(std::string s)
 {
 	std::cout << "float: ";
-	 if (s == "nan" || s == "inf" || s == "-inf" || s == "+inf")
+	 if (s == "nan" || s == "inf" || s == "-inf")
 	 	std::cout << s << "f";
-	else if (s == "inff" || s == "+inff" || s == "-inff")
+ 	else if (s == "+inf" || s == "+inff")
+	 	std::cout << "inff";
+	else if (s == "inff" || s == "-inff")
 		std::cout << s;
 	else if (whatNumber(s) == INTEGER)
 		std::cout << converttoInt(s) << ".0f";
@@ -144,12 +146,12 @@ void ScalarConverter::printFloat(std::string s)
 void ScalarConverter::printDouble(std::string s)
 {
 	std::cout << "double: ";
-	 if (s == "nan" || s == "inf" || s == "-inf" || s == "+inf")
+	 if (s ==  "nan" || s == "inf" || s == "-inf")
 	 	std::cout << s;
-	else if (s == "inff")
-	 	std::cout << "inf";
-	else if (s == "+inff" || s == "-inff")
-		std::cout << s.substr(0, 3);
+ 	else if (s == "+inf" || s == "inff" || s == "+inff")
+		std::cout << "inf";
+	else if (s == "-inff")
+		std::cout << "-inf";
 	else if (whatNumber(s) == INTEGER)
 		std::cout << converttoInt(s) << ".0";
 	else if (whatNumber(s) == DOUBLE)
