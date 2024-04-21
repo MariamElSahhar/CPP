@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 21:29:57 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/31 22:17:11 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/21 16:14:50 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 int main(void)
 {
+	Array<int> arr;
 	Array<int> arr1(5);
 	arr1[0] = 10;
 	arr1[1] = 20;
@@ -52,6 +53,8 @@ int main(void)
 		std::cout << arr3[i] << " ";
 	}
 	std::cout << std::endl;
+
+	try {arr3[-5];} catch (std::exception &e) {std::cout << e.what() << std::endl;}
 
 	return (0);
 }

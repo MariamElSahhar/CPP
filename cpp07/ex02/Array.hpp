@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+        */
+/*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 21:29:55 by melsahha          #+#    #+#             */
-/*   Updated: 2024/03/31 22:17:02 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/21 16:11:48 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ public:
 		}
 		return *this;
 	};
+
 	T &operator[](size_t i)
 	{
 		if (i >= _size)
