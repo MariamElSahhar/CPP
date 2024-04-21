@@ -6,7 +6,7 @@
 /*   By: melsahha <melsahha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/29 16:16:49 by melsahha          #+#    #+#             */
-/*   Updated: 2024/04/02 16:49:28 by melsahha         ###   ########.fr       */
+/*   Updated: 2024/04/21 15:44:08 by melsahha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	main(void)
 	std::cout << "a& = ";
 	identify( *a ); std::cout << std::endl;
 
-	std::cout << "b* = ";
+/* 	std::cout << "b* = ";
 	identify( b );
 	std::cout << "b& = ";
 	identify( *b ); std::cout << std::endl;
@@ -100,7 +100,7 @@ int	main(void)
 	std::cout << "d* = ";
 	identify( d );
 	std::cout << "d& = ";
-	identify( *d ); std::cout << std::endl;
+	identify( *d ); std::cout << std::endl; */
 
 	std::cout << "/* ***************************************** */" << std::endl;
 
