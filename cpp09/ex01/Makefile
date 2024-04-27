@@ -6,7 +6,7 @@
 #    By: melsahha <melsahha@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/26 09:23:23 by melsahha          #+#    #+#              #
-#    Updated: 2024/04/10 22:26:16 by melsahha         ###   ########.fr        #
+#    Updated: 2024/04/27 14:33:32 by melsahha         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,5 +39,6 @@ tests: $(NAME)
 	./$(NAME) "7 7 * 7 -"
 	./$(NAME) "1 2 * 2 / 2 * 2 4 - +"
 	./$(NAME) "(1 + 1)"
+	./$(NAME) "1 2 * 2 / 2 + 5 * 6 - 1 3 * - 4 5 * * 8 /"
 
 .PHONY: all clean fclean re run
